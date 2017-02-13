@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from clients.models import Auth_record
 
 # Create your views here.
 
-def post_list(request):
-    return render(request, 'clients/clients_list.html', {})
+def clients_list(request):
+	clients_active = Auth_record.objects.all().order_by('cl_address')
+	return render(request, 'clients/clients_list.html', {'clients': clients_active})
