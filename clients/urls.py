@@ -19,4 +19,5 @@ from clients import views
 
 urlpatterns = [
     url(r'^$', views.clients_list, name='clients_list'),
+    url(r'^client/(?P<pk>[0-9]+)/$', views.client_mod, name='client_mod'), 
 ]
