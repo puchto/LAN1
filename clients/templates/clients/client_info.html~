@@ -9,5 +9,5 @@
 <p>Downl: {{client.downl}}</p>
 <p>Upl: {{client.upl}}</p>
 
-
+<a href="{%url 'clients_list'}"> Powrót do listy </a>
 {% endblock content %}

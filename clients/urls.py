@@ -18,6 +18,9 @@ from clients import views
 
 
 urlpatterns = [
-    url(r'^$', views.clients_list, name='clients_list'),
-    url(r'^client/(?P<pk>[0-9]+)/$', views.client_mod, name='client_mod'), 
+    url(r'^$', views.main_view, name='main_view'),
+    url(r'^client_list/$', views.clients_list, name='clients_list'),
+    url(r'^client/info/(?P<pk>[0-9]+)/$', views.client_info, name='client_info'), 
+    url(r'^client/edit/(?P<pk>[0-9]+)/$', views.client_edit, name='client_edit'),
+    url(r'^clients_search/$', views.clients_search, name='clients_search')
 ]

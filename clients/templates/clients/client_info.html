@@ -5,9 +5,9 @@
 <p><div class="add">Klient: {{client.cl_address}}</div></p>
 <p>MAC: {{client.mac}}</p>
 <p>Adres IP: {{client.ip_add}}</p> 
-<p>Usługa: {{if client.kl_service = 0}} aktywny {{else}} nieaktywny</p> 
+<p>Usługa: {{client.kl_service}}</p> 
 <p>Downl: {{client.downl}}</p>
 <p>Upl: {{client.upl}}</p>
 
-
+<a href="{%url 'clients_list'%}"> Powrót do listy </a>
 {% endblock content %}
